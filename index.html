@@ -27,7 +27,7 @@
             position: relative;
         }
 
-        /* الدوك الشفاف الرفيع */
+        /* الدوك الشفاف النحيف جداً */
         .dock {
             position: fixed;
             bottom: 25px;
@@ -37,7 +37,7 @@
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
             border-radius: 30px;
-            padding: 10px 20px;
+            padding: 6px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -53,7 +53,7 @@
             justify-content: center;
             cursor: pointer;
             transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            padding: 8px 0;
+            padding: 6px 0;
             border-radius: 30px;
             flex: 1;
         }
@@ -66,10 +66,10 @@
             transform: scale(0.94);
         }
 
-        /* شكل الدائرة الخلفية */
+        /* شكل الدائرة الخلفية أصغر */
         .icon-circle {
-            width: 48px;
-            height: 48px;
+            width: 42px;
+            height: 42px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             display: flex;
@@ -83,10 +83,10 @@
             transform: scale(1.05);
         }
 
-        /* SVG icons */
+        /* SVG icons أصغر */
         .icon-svg {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             stroke: white;
             stroke-width: 1.7;
             fill: none;
@@ -99,9 +99,9 @@
             position: fixed;
             top: 20px;
             left: 20px;
-            padding: 10px 22px;
+            padding: 8px 20px;
             border-radius: 40px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             cursor: pointer;
             border: none;
@@ -115,7 +115,7 @@
             letter-spacing: 0.5px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .install-btn:hover {
@@ -129,8 +129,8 @@
 
         /* ايقونة زر التنزيل SVG */
         .download-icon {
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             stroke: white;
             stroke-width: 2;
             fill: none;
@@ -138,22 +138,22 @@
 
         @media (max-width: 500px) {
             .icon-circle {
-                width: 44px;
-                height: 44px;
+                width: 38px;
+                height: 38px;
             }
             .icon-svg {
-                width: 22px;
-                height: 22px;
+                width: 18px;
+                height: 18px;
             }
             .dock {
-                padding: 8px 16px;
+                padding: 5px 12px;
                 bottom: 18px;
                 left: 15px;
                 right: 15px;
             }
             .install-btn {
-                padding: 8px 18px;
-                font-size: 13px;
+                padding: 6px 16px;
+                font-size: 12px;
                 top: 15px;
                 left: 15px;
             }
@@ -171,9 +171,9 @@
         تثبيت التطبيق
     </button>
 
-    <!-- الدوك الشفاف الرفيع بدون كلمات -->
+    <!-- الدوك الشفاف النحيف -->
     <div class="dock">
-        <!-- ملف شخصي (كان الرئيسية) -->
+        <!-- ملف شخصي -->
         <div class="dock-item" id="profileBtn">
             <div class="icon-circle">
                 <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -183,7 +183,7 @@
             </div>
         </div>
 
-        <!-- إشعارات (كان مراسلات) -->
+        <!-- إشعارات -->
         <div class="dock-item" id="notificationsBtn">
             <div class="icon-circle">
                 <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -193,7 +193,7 @@
             </div>
         </div>
 
-        <!-- مراسلات (كان إشعارات) -->
+        <!-- مراسلات -->
         <div class="dock-item" id="messagesBtn">
             <div class="icon-circle">
                 <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -202,7 +202,7 @@
             </div>
         </div>
 
-        <!-- رئيسية (كان ملف شخصي) -->
+        <!-- رئيسية -->
         <div class="dock-item" id="homeBtn">
             <div class="icon-circle">
                 <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -241,7 +241,7 @@
             }
         });
 
-        // ايقونات الدوك حسب الترتيب الجديد
+        // ايقونات الدوك
         document.getElementById('profileBtn').addEventListener('click', () => {
             alert('👤 الملف الشخصي');
         });
