@@ -27,6 +27,60 @@
             position: relative;
         }
 
+        /* طبقة للصورة الأولى (تظهر في الشاشات الصغيرة) */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('bg1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+
+        /* طبقة للصورة الثانية (تظهر في الشاشات المتوسطة والكبيرة) */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('bg2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1;
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+
+        /* العرض أقل من 580px تظهر bg1.jpg وتختفي bg2.jpg */
+        @media (max-width: 580px) {
+            body::before {
+                opacity: 1;
+            }
+            body::after {
+                opacity: 0;
+            }
+        }
+
+        /* العرض أكبر من 581px تظهر bg2.jpg فقط */
+        @media (min-width: 581px) {
+            body::before {
+                opacity: 0;
+            }
+            body::after {
+                opacity: 1;
+            }
+        }
+
         /* الدوك الشفاف النحيف جداً */
         .dock {
             position: fixed;
