@@ -1,10 +1,11 @@
-const CACHE_NAME = 'app-cache-v4';
+const CACHE_NAME = 'app-cache-v5';
 
 const urls = [
     './',
     './index.html',
     './manifest.json',
-    './bg.jpg'
+    './bg.jpg',
+    './bg1.jpg'
 ];
 
 // install
